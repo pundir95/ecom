@@ -21,7 +21,7 @@ app.use(cors());
 
 
 app.get("/", (req, res) => {
-    res.send("<h1>Welcome to ecommerce app</h1>");
+    res.send("<h1>Welcome to ecommerce app9999</h1>");
 });
 
 //routes
