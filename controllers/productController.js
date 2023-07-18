@@ -196,3 +196,24 @@ export const updateController = async (req, res, next) => {
   }
 
 }
+
+export const fetchProductWithCategory = async (req, res, next) => {
+  try {
+    let id = req.params.catId;
+    let product = await productModel.find({ category: id });
+    res.status(200).send({
+      success: true,
+      message: "Product Successfully",
+      product
+    })
+  } catch (error) {
+    res.status(500).send({
+      success: false,
+      error,
+      message: "Error in  product",
+    });
+  }
+
+}
+
+

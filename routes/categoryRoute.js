@@ -12,7 +12,7 @@ router.post(
     createCategoryController
 );
 //getALl category
-router.get("/get-category", isAuthenticated, isAdmin, getAllCategoryController);
+router.get("/get-category", isAuthenticated, getAllCategoryController);
 router.put(
     "/update-category/:id",
     isAuthenticated,
